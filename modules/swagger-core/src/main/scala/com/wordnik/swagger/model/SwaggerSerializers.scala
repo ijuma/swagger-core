@@ -236,7 +236,7 @@ object SwaggerSerializers extends Serializers {
       ("authorizations" -> {
         x.authorizations match {
           case e: List[AuthorizationType] if (e.size > 0) => {
-            Extraction.decompose((for(at <- e) yield {
+            Extraction.decompose((for(at: AuthorizationType <- e) yield {
               if(at.`type` != "") Some(at.`type`, at)
               else None
             }).flatten.toMap)
@@ -485,7 +485,7 @@ trait Serializers {
       ("authorizations" -> {
         x.authorizations match {
           case e: List[AuthorizationType] if (e.size > 0) => {
-            Extraction.decompose((for(at <- e) yield {
+            Extraction.decompose((for(at: AuthorizationType <- e) yield {
               if(at.`type` != "") Some(at.`type`, at)
               else None
             }).flatten.toMap)
@@ -544,7 +544,7 @@ trait Serializers {
       ("authorizations" -> {
         x.authorizations match {
           case e: List[AuthorizationType] if (e.size > 0) => {
-            Extraction.decompose((for(at <- e) yield {
+            Extraction.decompose((for(at: AuthorizationType <- e) yield {
               if(at.`type` != "") Some(at.`type`, at)
               else None
             }).flatten.toMap)
@@ -736,7 +736,7 @@ trait Serializers {
       ("authorizations" -> {
         x.authorizations match {
           case e: List[AuthorizationType] if (e.size > 0) => {
-            Extraction.decompose((for(at <- e) yield {
+            Extraction.decompose((for(at: AuthorizationType <- e) yield {
               if(at.`type` != "") {
                 Some(at.`type`, at)
               }

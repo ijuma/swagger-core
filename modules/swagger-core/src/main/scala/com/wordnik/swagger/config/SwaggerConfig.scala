@@ -4,12 +4,12 @@ import com.wordnik.swagger.core.SwaggerSpec
 
 import com.wordnik.swagger.model.{ AuthorizationType, ApiInfo }
 
-import scala.reflect.BeanProperty
+import scala.beans.BeanProperty
 
 class SwaggerConfig(
-  @BeanProperty var apiVersion: String, 
-  @BeanProperty var swaggerVersion: String, 
-  @BeanProperty var basePath: String, 
+  @BeanProperty var apiVersion: String,
+  @BeanProperty var swaggerVersion: String,
+  @BeanProperty var basePath: String,
   @BeanProperty var apiPath: String,
   @BeanProperty var authorizations: List[AuthorizationType] = List(),
   var info: Option[ApiInfo] = None) {
